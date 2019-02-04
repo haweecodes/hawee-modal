@@ -1,21 +1,34 @@
-# modal
+# hawee-modal
 
-## Project setup
+## Install
 ```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
+npm i hawee-modal
 ```
 
-### Compiles and minifies for production
+### How to use
+Include module to the file you want to use it in
 ```
-npm run build
+import Modal from 'hawee-modal'
+import '../node_modules/hawee-modal/dist/h-modal.css'
+```
+Create modal
+```vue
+<Modal v-model="isVisible">
+  hello, world!
+</Modal>
 ```
 
-### Lints and fixes files
-```
-npm run lint
+####Declare Size
+There are three types of size available
+- small (by default)
+- medium
+- large
+
+example is given below
+```vue
+<Modal v-model="isVisible" size="large">
+  hello, world!
+</Modal>
+
+
 ```
