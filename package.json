@@ -19,7 +19,7 @@
   "homepage": "https://github.com/haweecodes/hawee-modal",
   "repository": {
     "type": "git",
-    "url": "https://github.com/haweecodes/hawee-modal.git"
+    "url": "https://github.com/haweecodes/hawee-modal"
   },
   "scripts": {
     "serve": "vue-cli-service serve",
