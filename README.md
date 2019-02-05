@@ -29,6 +29,17 @@ example is given below
 <Modal v-model="isVisible" size="large">
   hello, world!
 </Modal>
+```
 
+####Declare Type
+There are three types of size available
+- info (by default)
+- error
+- warning
 
+example is given below
+```vue
+<Modal v-model="isVisible" type="error">
+  hello, world!
+</Modal>
 ```
