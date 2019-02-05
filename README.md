@@ -9,7 +9,7 @@ npm i hawee-modal
 Include module to the file you want to use it in
 ```
 import Modal from 'hawee-modal'
-import '../node_modules/hawee-modal/dist/h-modal.css'
+import 'hawee-modal/dist/h-modal.css'
 ```
 Create modal
 ```vue

@@ -1,6 +1,6 @@
 <template>
     <div id="_modal_container"  v-show="modal_visibility" @click.stop="closeModel">
-        <div id="_modal_content" :class="size" @click.stop="">
+        <div id="_modal_content" :class="size +' '+ type" @click.stop="">
             <slot></slot>
             <div id="_modal_dismiss_container">
                 <button id="_modal_dismiss" @click="closeModel">Close</button>
@@ -20,6 +20,9 @@
             },
             size:{
                 default: "small"
+            },
+            type:{
+                default: "info"
             }
         },
         model: {
@@ -30,7 +33,8 @@
         data() {
             return {
                 modal_visibility: this.visibility,
-                modal_size: this.size
+                modal_size: this.size,
+                modal_type: this.type,
             }
         },
         methods: {
@@ -58,6 +62,8 @@
     }
 
     #_modal_container {
+        transition: width 2s;
+        -webkit-transition: width 2s; /* Safari 3.1 to 6.0 */
         position: fixed; /* Stay in place */
         z-index: 1; /* Sit on top */
         padding-top: 100px; /* Location of the box */
@@ -71,19 +77,20 @@
     }
 
     #_modal_content {
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        box-shadow: 0px 24px 48px rgba(0, 0, 0, 0.2);
         transition: 0.3s;
         left: 20%;
         position: fixed; /* Stay in place */
         z-index: 1; /* Sit on top */
         padding: 10px; /* Location of the box */
         background-color: #fefefe;
-        border: 1px solid #888;
+        border: 1px solid rgba(136, 136, 136, 0.47);
         width: 60%;
     }
 
     #_modal_dismiss_container {
         text-align: right;
+        margin-top: 10px;
     }
 
     .small{
@@ -97,5 +104,18 @@
     .large{
         left: 20% !important;
         width: 60% !important;
+    }
+
+    .error{
+        box-shadow: 0px 10px 30px rgba(216, 0, 12, 0.25) !important;
+    }
+    .success{
+        box-shadow: 0px 10px 30px rgba(79, 138, 16, 0.25) !important;
+    }
+    .warning{
+        box-shadow: 0px 10px 30px rgba(159, 96, 0, 0.25) !important;
+    }
+    .info{
+        box-shadow: 0px 10px 30px rgba(0, 82, 155, 0.25) !important;
     }
 </style>

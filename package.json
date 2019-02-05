@@ -1,8 +1,26 @@
 {
   "name": "hawee-modal",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "private": false,
   "main": "./dist/h-modal.umd.js",
+  "author": "haweecodes <haweewes@gmail.com>",
+  "keywords": [
+    "vue",
+    "modal",
+    "javascript",
+    "front-end",
+    "web",
+    "vuejs",
+    "dialog",
+    "alert",
+    "modal"
+  ],
+  "description": "A simple modal that helps you show messages to your convinient.",
+  "homepage": "https://github.com/haweecodes/hawee-modal",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/haweecodes/hawee-modal.git"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
