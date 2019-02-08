@@ -3,7 +3,7 @@
         <div id="_modal_content" :class="size +' '+ type" @click.stop="">
             <slot></slot>
             <div id="_modal_dismiss_container">
-                <button id="_modal_dismiss" @click="closeModel">Close</button>
+                <button id="_modal_dismiss" class="button" @click="closeModel">Close</button>
             </div>
         </div>
     </div>
@@ -86,11 +86,30 @@
         background-color: #fefefe;
         border: 1px solid rgba(136, 136, 136, 0.47);
         width: 60%;
+
+    }
+
+   @media only screen and (max-width: 600px) {
+         #_modal_content {
+        max-height: 60%;
+        overflow-y: scroll;
+    }
     }
 
     #_modal_dismiss_container {
         text-align: right;
         margin-top: 10px;
+    }
+
+    .button {
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
     }
 
     .small{
