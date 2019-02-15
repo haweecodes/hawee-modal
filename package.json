@@ -1,6 +1,6 @@
 {
   "name": "hawee-modal",
-  "version": "0.2.3",
+  "version": "0.2.5",
   "private": false,
   "main": "./dist/h-modal.umd.js",
   "author": "haweecodes <haweewes@gmail.com>",
